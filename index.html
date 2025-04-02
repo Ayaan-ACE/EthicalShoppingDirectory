@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Shopping Directory - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Historical+Textured&family=Fast+Compressed:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Animation for fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button hover effect */
+        .nav-button, .view-brands-button, .get-started-button {
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-button:hover, .view-brands-button:hover, .get-started-button:hover {
+            transform: scale(1.05);
+            background-color: #e1cfb9; /* Light Beige */
+            color: #202A44; /* Dark Blue */
+        }
+
+        /* Testimonials Section */
+        .testimonial-slider {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            display: none; /* Hide all testimonials by default */
+        }
+
+        .testimonial.fade-in {
+            display: block; /* Show the current testimonial */
+        }
+
+        /* Button styles for testimonials */
+        .prev, .next {
+            background-color: #202A44; /* Dark Blue */
+            color: #ecf0f1; /* Light Gray */
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #e1cfb9; /* Light Beige */
+            color: #202A44; /* Dark Blue */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 48px;" class="fade-in">Ethical Shopping Directory</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-button">Home</a></li>
+                <li><a href="categories.html" class="nav-button">Categories</a></li>
+                <li><a href="about.html" class="nav-button">About Us</a></li>
+                <li><a href="contact.html" class="nav-button">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" style="background-image: url('https://source.unsplash.com/1600x900/?nature,shopping'); background-size: cover; color: #ffffff; padding: 80px 20px; text-align: center;" class="fade-in">
+            <h2 style="font-size: 36px;">Welcome to the Ethical Shopping Directory</h2>
+            <p style="font-size: 20px;">Your one-stop platform for discovering sustainable and ethically-produced brands across various categories.</p>
+            <a href="categories.html" class="view-brands-button" style="font-size: 18px;">Browse Categories</a>
+            <div class="hero-animation">
+                <img src="https://images.squarespace-cdn.com/content/5511f9bee4b068878ae651fb/1573325390538-KMB7VEU2RF3VFNX8J9O5/ETHICALFASHIONDIRECTORY.png?format=1500w&content-type=image%2Fpng" alt="Animated Icon" style="width: 500px; margin-top: 100px;">
+            </div>
+        </section>
+        <!-- Benefits Section -->
+        <section id="benefits" style="background-color: #e1cfb9; padding: 30px 20px; text-align: center;" class="fade-in">
+            <h2 style="color: #202A44; font-family: 'Historical Textured', serif; font-size: 32px; margin-bottom: 20px;">Why Choose Us?</h2>
+            <p style="color: #333; font-size: 18px; margin-bottom: 20px;">At the Ethical Shopping Directory, we are dedicated to promoting sustainable and ethical shopping practices. Our platform connects you with brands that prioritize:</p>
+            <ul style="list-style-type: none; padding: 0; color: #333; font-size: 18px;">
+                <li>🌱 <strong>Sustainability</strong>: Discover products made with eco-friendly materials and processes.</li>
+                <li>🤝 <strong>Fair Trade</strong>: Support brands that ensure fair wages and working conditions for their workers.</li>
+                <li>🌍 <strong>Positive Impact</strong>: Make a difference with every purchase by choosing brands that care for the planet.</li>
+                <li>💚 <strong>Conscious Consumerism</strong>: Join a community of like-minded individuals committed to responsible shopping.</li>
+            </ul>
+            <p style="color: #333; font-size: 18px;">By shopping ethically, you contribute to a healthier planet and a brighter future for all.</p>
+        </section>
+
+        <!-- Interactive Testimonials Section -->
+        <section id="testimonials" style="background-color: #f9f9f9; padding: 30px 20px; text-align: center;" class="fade-in">
+            <h2 style="color: #202A44; font-family: 'Historical Textured', serif; font-size: 32px; margin-bottom: 20px;">What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial fade-in">
+                    <p style="font-size: 18px;">"The Ethical Shopping Directory has transformed the way I shop. I love knowing that my purchases support sustainable brands!"</p>
+                    <cite style="font-size: 16px;">- Jay J.</cite>
+                </div>
+                <div class="testimonial fade-in">
+                    <p style="font-size: 18px;">"I found so many amazing ethical brands through this directory. It's a fantastic resource for conscious consumers!"</p>
+                    <cite style="font-size: 16px;">- Mark T.</cite>
+                </div>
+                <button class="prev" onclick="changeTestimonial(-1)">&#10094;</button>
+                <button class="next" onclick="changeTestimonial(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="call-to-action" style="background-color: #202A44; color: #ecf0f1; padding: 30px 20px; text-align: center;" class="fade-in">
+            <h2 style="font-size: 32px;">Join the Movement</h2>
+            <p style="font-size: 18px;">Start shopping ethically today and make a difference with every purchase. Together, we can create a better future for our planet.</p>
+            <a href="categories.html" class="view-brands-button get-started-button" style="font-size: 18px;">Get Started</a>
+        </section>
+    </main>
+
+    <footer>
+        <p style="font-size: 16px;">&copy; 2025 Ethical Shopping Directory</p>
+    </footer>
+
+    <script>
+        let currentTestimonialIndex = 0;
+
+        function changeTestimonial(direction) {
+            const testimonials = document.querySelectorAll('.testimonial');
+            testimonials[currentTestimonialIndex].classList.remove('fade-in');
+            currentTestimonialIndex = (currentTestimonialIndex + direction + testimonials.length) % testimonials.length;
+            testimonials[currentTestimonialIndex].classList.add('fade-in');
+        }
+
+        // Initialize the first testimonial
+        document.addEventListener('DOMContentLoaded', () => {
+            const testimonials = document.querySelectorAll('.testimonial');
+            testimonials.forEach((testimonial, index) => {
+                if (index !== currentTestimonialIndex) {
+                    testimonial.classList.remove('fade-in');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

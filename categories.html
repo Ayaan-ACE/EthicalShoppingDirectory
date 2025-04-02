@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Shopping Directory - Categories</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Historical+Textured&family=Fast+Compressed:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Animation for fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button hover effect */
+        .nav-button, .view-brands-button, .get-started-button {
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-button:hover, .view-brands-button:hover, .get-started-button:hover {
+            transform: scale(1.05);
+            background-color: #e1cfb9; /* Light Beige */
+            color: #202A44; /* Dark Blue */
+        }
+
+        /* Card hover effect */
+        .category-card, .brand-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-card:hover, .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Fade-out effect */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Fade-in image effect */
+        .fade-in-image {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-in-image.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ethical Shopping Directory</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html" class="nav-button">Home</a></li>
+                <li><a href="categories.html" class="nav-button">Categories</a></li>
+                <li><a href="about.html" class="nav-button">About Us</a></li>
+                <li><a href="contact.html" class="nav-button">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="categories" class="fade-in">
+            <h2>Browse by Categories</h2>
+            <div id="category-list" class="category-list">
+                <!-- Categories will be dynamically inserted here -->
+            </div>
+            <div id="brand-container">
+                <!-- Brand details will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ethical Shopping Directory</p>
+    </footer>
+</body>
+</html>
